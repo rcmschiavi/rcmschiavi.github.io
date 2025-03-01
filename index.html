@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AR.js A-Frame Location-based</title>
+<title>Rodolfo Schiavi - Github page</title>
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 </head>
-<body>
+<body style="background-color: #222222;">
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    <a-camera></a-camera>
-    <a-entity material='emissive: #ffff' geometry='primitive: box' position="0 1 -5" scale="1 1 1"></a-entity>
+    <a-entity id="blogButton" geometry="primitive: box" material="color: blue" position="0 1 -3" scale="1 0.5 0.5" class="clickable">
+        <a-text value="Blog" align="center" position="0 0.8 0.26" color="#FF0000" scale="2 2 2"></a-text>
+    </a-entity>
+    <a-entity id="linkedinButton" geometry="primitive: box" material="color: green" position="2 1 -3" scale="1 0.5 0.5" class="clickable">
+        <a-text value="LinkedIn" align="center" position="0 0.8 0.26" color="#FF0000" scale="2 2 2"></a-text>
+    </a-entity>
+    <a-entity camera look-controls>
+        <a-cursor></a-cursor>
+    </a-entity>
 </a-scene>
+
+<script>
+  document.querySelector('#blogButton').addEventListener('click', function () {
+    window.location.href = '/blog';
+  });
+
+  document.querySelector('#linkedinButton').addEventListener('click', function () {
+    window.location.href = 'https://www.linkedin.com/in/rodolfo-schiavi/';
+  });
+</script>
 </body>
 </html>
