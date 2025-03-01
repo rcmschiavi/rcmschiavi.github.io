@@ -1,30 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Rodolfo Schiavi - Github page</title>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodolfo Schiavi - Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+        }
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: #0073b1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #005582;
+        }
+    </style>
 </head>
-<body style="background-color: #222222;">
-<a-scene vr-mode-ui='enabled: false' renderer='antialias: true; alpha: true'>
-    <a-entity id="blogButton" geometry="primitive: box" material="color: blue" position="-1 1 -3" scale="1 0.5 0.5" class="clickable">
-        <a-text value="Blog" align="center" position="0 0.8 0.26" color="#FF0000" scale="2 2 2"></a-text>
-    </a-entity>
-    <a-entity id="linkedinButton" geometry="primitive: box" material="color: green" position="1.2 1 -3" scale="1 0.5 0.5" class="clickable">
-        <a-text value="LinkedIn" align="center" position="0 0.8 0.26" color="#FF0000" scale="2 2 2"></a-text>
-    </a-entity>
-    <a-entity camera look-controls position="0 1.6 0">
-        <a-cursor></a-cursor>
-    </a-entity>
-</a-scene>
+<body>
+
+    <h1>Rodolfo Schiavi</h1>
+    <h2>Backend Developer</h2>
+    <div class="links">
+        <a href="/blog" class="btn" id="blog-btn">Read My Blog</a>
+        <a href="https://linkedin.com/in/rodolfo-schiavi" class="btn" id="linkedin-btn">Connect on LinkedIn</a>
+    </div>
+    <br>
+    <h3>Skills</h2>
+    <div style="width: 25%;">
+        <p>Node | Python | Go | Relational databases | non-relational databases | AWS | Cybersecurity | Agentic AI | RAG </p>
+    </div>
+
+</body>
+</html>
 
 <script>
-  document.querySelector('#blogButton').addEventListener('click', function () {
-    window.location.href = '/blog';
-  });
+    document.getElementById("blog-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+        setTimeout(() => {
+            window.location.href = "/blog";
+        }, 500); // 500ms delay before redirection
+    });
 
-document.querySelector('#linkedinButton').addEventListener('click', function () {
-    window.open('https://www.linkedin.com/in/rodolfo-schiavi/', '_blank');
-});
+    document.getElementById("linkedin-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+        setTimeout(() => {
+            window.location.href = "https://linkedin.com/in/rodolfo-schiavi";
+        }, 500);
+    });
 </script>
 </body>
 </html>
