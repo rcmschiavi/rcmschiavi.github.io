@@ -1,0 +1,6 @@
+<a href="{{ site.url }}{{ post.url }}" class="flex flex-1 gap-3 rounded-lg border border-[#314f68] bg-[#182834] p-4 flex-col relative">
+    <div class="flex flex-col gap-1">
+      <p class="text-[#90b0cb] font-normal leading-normal text-2xl"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></p>
+      <h2 class="text-white font-bold leading-tight text-3xl">{{ post.title }}</h2>
+    </div>
+</a>

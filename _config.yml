@@ -1,0 +1,8 @@
+# main text of home
+title: Rodolfo Schiavi
+bio: A backend developer
+
+description: A blog about software engineering, programming, and technology.
+
+plugins:
+  - jemoji
