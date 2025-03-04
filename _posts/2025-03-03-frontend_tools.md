@@ -51,7 +51,7 @@ End of the begining, beniging, begning...
 
 :grin:
 
-It is Ending
+It is just starting
 
 Now I can test better the layout changes and have a better time coding.
 
