@@ -17,7 +17,7 @@
     {% include favicon.html %}
   </head>
   <body>
-    <div class="bg-[#101a23] border-b border-amber-500/40 px-4 py-4" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+    <div class="self-stretch shrink-0 bg-[#101a23] border-b border-amber-500/40 px-4 py-4" style='font-family: Manrope, "Noto Sans", sans-serif;'>
       <div class="max-w-[1500px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
         <p class="text-amber-500 text-lg md:text-xl font-semibold">
           ⚠️ This blog has moved — new posts live on my new site.
@@ -85,7 +85,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh; /* Changed from height to min-height */
         margin: 0;
     }
     h1 {
